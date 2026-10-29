@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How To Use - MoniGo</title>
+    <title>How To Do - MoniGo</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -69,6 +69,7 @@
         }
         .category-header.active {
             border-bottom-color: #e0e0e0;
+            background-color: #f0f7ff;
         }
         .category-header .arrow {
             transition: transform 0.2s ease;
@@ -131,9 +132,10 @@
 
 <div class="container">
     <nav>
-        <a href="index.html">Privacy Policy</a>
-        <a href="terms.html">Terms & Conditions</a>
-        <a href="help.html"><strong>Help & Support</strong></a>
+        <a href="index.html">Home Hub</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="howtodo.html"><strong>How To Do</strong></a>
     </nav>
 
     <h1>MoniGo — User Guide & FAQ</h1>
@@ -172,4 +174,191 @@
                     <span>How does automatic SMS scanning work in MoniGo?</span>
                     <span>+</span>
                 </div>
-                <div class="qa-answer">MoniGo scans incoming bank SMS messages to auto-detect transaction amount, pay mode, and due dates. It creates transaction drafts that you can
+                <div class="qa-answer">MoniGo scans incoming bank SMS messages to auto-detect transaction amount, pay mode, and due dates. It creates transaction drafts that you can review and approve in one tap.</div>
+            </div>
+            <div class="qa-item">
+                <div class="qa-question" onclick="toggleQA(this)">
+                    <span>How to use Split in transactions?</span>
+                    <span>+</span>
+                </div>
+                <div class="qa-answer">When adding a transaction, tap Split to divide a single payment across multiple categories or subcategories (or import directly from a Shopping List). MoniGo automatically calculates remaining amounts so your category spending breakdown stays exact.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Category 2 -->
+    <div class="category-group">
+        <div class="category-header" onclick="toggleCategory(this)">
+            <span>Debt & Balance Management</span>
+            <span class="arrow">&#9660;</span>
+        </div>
+        <div class="category-content">
+            <div class="qa-item">
+                <div class="qa-question" onclick="toggleQA(this)">
+                    <span>What does the Yellow icon near amount do?</span>
+                    <span>+</span>
+                </div>
+                <div class="qa-answer">It is the Clear Debt button, used to quickly fill in the remaining balance required to settle a debt.</div>
+            </div>
+            <div class="qa-item">
+                <div class="qa-question" onclick="toggleQA(this)">
+                    <span>What is the difference between Lent and Borrow in Debt Manager?</span>
+                    <span>+</span>
+                </div>
+                <div class="qa-answer">Under Debt Manager, "Lent" tracks money you gave to others (which they owe you), while "Borrow" tracks money you took from others (which you need to pay back).</div>
+            </div>
+            <div class="qa-item">
+                <div class="qa-question" onclick="toggleQA(this)">
+                    <span>What is the difference between Real Balance and Spendable Balance in Pay Mode?</span>
+                    <span>+</span>
+                </div>
+                <div class="qa-answer">Real Balance is Cash + Bank - Credit Card Debt ± Debt balance. Spendable Balance subtracts Emergency Fund target, Goal dues, and Recurring expenses from Real Balance so you know what money is safely available.</div>
+            </div>
+            <div class="qa-item">
+                <div class="qa-question" onclick="toggleQA(this)">
+                    <span>How do Credit Card statement and payment due reminders work?</span>
+                    <span>+</span>
+                </div>
+                <div class="qa-answer">In Pay Mode, set your card's statement and due dates (or let MoniGo auto-extract them from Bank SMS). MoniGo sends reminder alerts before your due date so you never miss a bill.</div>
+            </div>
+            <div class="qa-item">
+                <div class="qa-question" onclick="toggleQA(this)">
+                    <span>How to share Debt details with someone?</span>
+                    <span>+</span>
+                </div>
+                <div class="qa-answer">Open Debt Manager and select the person's debt account. Tap the Share icon at the top right of the debt card to generate and send a statement image and text summary via WhatsApp, Email, or messaging apps.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Category 3 -->
+    <div class="category-group">
+        <div class="category-header" onclick="toggleCategory(this)">
+            <span>Budgeting, Goals & Planning</span>
+            <span class="arrow">&#9660;</span>
+        </div>
+        <div class="category-content">
+            <div class="qa-item">
+                <div class="qa-question" onclick="toggleQA(this)">
+                    <span>How does Money Move help me?</span>
+                    <span>+</span>
+                </div>
+                <div class="qa-answer">Money Move compares your Actual Income against your Planned Budget to help you achieve zero-based budgeting. It categorizes spending into Essentials, Lifestyle, and Investment so you can maintain a healthy financial ratio, while tracking your Income Covered percentage and remaining Buffer.</div>
+            </div>
+            <div class="qa-item">
+                <div class="qa-question" onclick="toggleQA(this)">
+                    <span>How to create and track financial Goals?</span>
+                    <span>+</span>
+                </div>
+                <div class="qa-answer">Set a target savings amount and completion date for goals (e.g., New Car or Vacation). Record contributions over time, set reminder notifications, and track your progress percentage.</div>
+            </div>
+            <div class="qa-item">
+                <div class="qa-question" onclick="toggleQA(this)">
+                    <span>How does MoniGo calculate my Emergency Fund target?</span>
+                    <span>+</span>
+                </div>
+                <div class="qa-answer">MoniGo analyzes your average essential monthly expenses and multiplies it by your chosen safety duration (e.g., 3, 6, or 12 months) to set your recommended emergency target.</div>
+            </div>
+            <div class="qa-item">
+                <div class="qa-question" onclick="toggleQA(this)">
+                    <span>What does the Green icon in the Budget limit dialog do?</span>
+                    <span>+</span>
+                </div>
+                <div class="qa-answer">It is the Copy from Last Month button. Tapping it automatically copies all category budget limits set in the previous month into your current month's budget fields.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Category 4 -->
+    <div class="category-group">
+        <div class="category-header" onclick="toggleCategory(this)">
+            <span>Reports & CSV Import/Export</span>
+            <span class="arrow">&#9660;</span>
+        </div>
+        <div class="category-content">
+            <div class="qa-item">
+                <div class="qa-question" onclick="toggleQA(this)">
+                    <span>How to export PDF or CSV financial reports?</span>
+                    <span>+</span>
+                </div>
+                <div class="qa-answer">Go to Tools > Reports, select your export format (PDF or CSV), filter by Date Range, Categories, Pay Modes, or Amount Range, and tap Export to save or share your report.</div>
+            </div>
+            <div class="qa-item">
+                <div class="qa-question" onclick="toggleQA(this)">
+                    <span>What happens to existing data during CSV import?</span>
+                    <span>+</span>
+                </div>
+                <div class="qa-answer">By default, new transactions are merged into your existing account data. If you enable "Discard existing data" in Import Settings, MoniGo will clear old transactions for that account before importing.</div>
+            </div>
+            <div class="qa-item">
+                <div class="qa-question" onclick="toggleQA(this)">
+                    <span>How does MoniGo handle new or unrecognized Categories and Pay Modes in the CSV?</span>
+                    <span>+</span>
+                </div>
+                <div class="qa-answer">MoniGo opens a guided Category & Pay Mode Mapping screen. It automatically matches identical names and lets you manually merge items, rename them, or assign Category Purpose (Essential, Lifestyle, Investment) and Pay Mode Type (Bank, Card, Cash, Wallet).</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Category 5 -->
+    <div class="category-group">
+        <div class="category-header" onclick="toggleCategory(this)">
+            <span>Backup, Security & Sync</span>
+            <span class="arrow">&#9660;</span>
+        </div>
+        <div class="category-content">
+            <div class="qa-item">
+                <div class="qa-question" onclick="toggleQA(this)">
+                    <span>How to backup and restore financial data securely?</span>
+                    <span>+</span>
+                </div>
+                <div class="qa-answer">Go to Settings > Backup & Restore to export AES-encrypted local backup files, or enable automatic encrypted sync to your personal Google Drive.</div>
+            </div>
+            <div class="qa-item">
+                <div class="qa-question" onclick="toggleQA(this)">
+                    <span>How does backup password / encryption key work?</span>
+                    <span>+</span>
+                </div>
+                <div class="qa-answer">Backups use AES-256 encryption. If using Google Login, the key links to your account for automatic restore across devices. If using an offline App Key, save your key (e.g., MG-XXXX-XXXX); entering it during restore decrypts your data on any device.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-box">
+        <h3>Still have questions?</h3>
+        <p>Contact our support team directly for further assistance:</p>
+        <p><strong>Developer:</strong> YNDapps<br>
+        <strong>Email Support:</strong> <a href="mailto:yndapps@gmail.com">yndapps@gmail.com</a></p>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 YNDapps. All rights reserved.</p>
+    </footer>
+</div>
+
+<script>
+function toggleCategory(header) {
+    header.classList.toggle('active');
+    const content = header.nextElementSibling;
+    if (content.style.display === 'block') {
+        content.style.display = 'none';
+    } else {
+        content.style.display = 'block';
+    }
+}
+
+function toggleQA(questionElement) {
+    const answer = questionElement.nextElementSibling;
+    const toggleIcon = questionElement.querySelector('span:last-child');
+    if (answer.style.display === 'block') {
+        answer.style.display = 'none';
+        toggleIcon.textContent = '+';
+    } else {
+        answer.style.display = 'block';
+        toggleIcon.textContent = '−';
+    }
+}
+</script>
+
+</body>
+</html>
