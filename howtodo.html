@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How To Use - MoniGo</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            background-color: #f9fbfd;
+        }
+        .container {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        nav {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 15px;
+        }
+        nav a {
+            color: #1a73e8;
+            text-decoration: none;
+            margin-right: 15px;
+            font-weight: 500;
+        }
+        nav a:hover { text-decoration: underline; }
+        h1 {
+            color: #1a73e8;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            color: #5f6368;
+            font-weight: 500;
+            margin-bottom: 25px;
+        }
+        
+        /* Category Group Style */
+        .category-group {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            background-color: #fff;
+        }
+        .category-header {
+            background-color: #f8fafc;
+            padding: 16px 20px;
+            font-weight: 600;
+            font-size: 1.15rem;
+            color: #1a73e8;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid transparent;
+            user-select: none;
+        }
+        .category-header:hover {
+            background-color: #f0f7ff;
+        }
+        .category-header.active {
+            border-bottom-color: #e0e0e0;
+        }
+        .category-header .arrow {
+            transition: transform 0.2s ease;
+            font-size: 0.8rem;
+        }
+        .category-header.active .arrow {
+            transform: rotate(180deg);
+        }
+        .category-content {
+            display: none;
+            padding: 0 20px 10px 20px;
+        }
+
+        /* Q&A Accordion Style */
+        .qa-item {
+            border-bottom: 1px solid #edf2f7;
+            padding: 12px 0;
+        }
+        .qa-item:last-child {
+            border-bottom: none;
+        }
+        .qa-question {
+            font-weight: 600;
+            font-size: 1rem;
+            color: #2d3748;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 0;
+            user-select: none;
+        }
+        .qa-question:hover {
+            color: #1a73e8;
+        }
+        .qa-answer {
+            display: none;
+            color: #4a5568;
+            font-size: 0.95rem;
+            padding: 8px 0 4px 0;
+            line-height: 1.6;
+        }
+
+        .contact-box {
+            background-color: #f0f7ff;
+            border-left: 4px solid #1a73e8;
+            padding: 20px;
+            margin-top: 40px;
+            border-radius: 0 6px 6px 0;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #718096;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <nav>
+        <a href="index.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+        <a href="help.html"><strong>Help & Support</strong></a>
+    </nav>
+
+    <h1>MoniGo — User Guide & FAQ</h1>
+    <div class="subtitle">Tap a category to expand questions, then tap any question to read the answer.</div>
+
+    <!-- Category 1 -->
+    <div class="category-group">
+        <div class="category-header" onclick="toggleCategory(this)">
+            <span>Transactions & Entry Features</span>
+            <span class="arrow">&#9660;</span>
+        </div>
+        <div class="category-content">
+            <div class="qa-item">
+                <div class="qa-question" onclick="toggleQA(this)">
+                    <span>How to use voice entry?</span>
+                    <span>+</span>
+                </div>
+                <div class="qa-answer">Simply speak about your transaction. It will automatically detect the Type, Amount, and Category. For example, say "movie 500" and it will record Expense: Movie 500.</div>
+            </div>
+            <div class="qa-item">
+                <div class="qa-question" onclick="toggleQA(this)">
+                    <span>How to add recurring transactions?</span>
+                    <span>+</span>
+                </div>
+                <div class="qa-answer">Tap + on the Dashboard to open the Add Transaction page. Near the Time field, tap the recurring icon and fill in the details regarding repetition schedule, reminders, etc.</div>
+            </div>
+            <div class="qa-item">
+                <div class="qa-question" onclick="toggleQA(this)">
+                    <span>How to bulk edit or delete multiple transactions at once?</span>
+                    <span>+</span>
+                </div>
+                <div class="qa-answer">On the Transaction screen, long-press any transaction to enter bulk selection mode. Select multiple items, then use the top action bar to change Category, Pay Mode, Move Account, or Delete in one tap.</div>
+            </div>
+            <div class="qa-item">
+                <div class="qa-question" onclick="toggleQA(this)">
+                    <span>How does automatic SMS scanning work in MoniGo?</span>
+                    <span>+</span>
+                </div>
+                <div class="qa-answer">MoniGo scans incoming bank SMS messages to auto-detect transaction amount, pay mode, and due dates. It creates transaction drafts that you can
